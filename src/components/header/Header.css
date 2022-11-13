@@ -1,11 +1,11 @@
 .sun {
     animation: logo-spin infinite 3s linear;
-    cursor: pointer;
+    @apply text-skyblue
 }
 
 .moon {
     animation: logo-shake infinite 2s linear;
-    cursor: pointer;
+    @apply text-skyblue
 }
 
 @keyframes logo-spin {
