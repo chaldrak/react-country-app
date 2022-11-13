@@ -1,0 +1,36 @@
+.sun {
+    animation: logo-spin infinite 3s linear;
+    cursor: pointer;
+}
+
+.moon {
+    animation: logo-shake infinite 2s linear;
+    cursor: pointer;
+}
+
+@keyframes logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+@keyframes logo-shake {
+    0% {
+      transform: rotate(-45deg);
+    }
+    25% {
+      transform: rotate(-15deg);
+    }
+    50% {
+        transform: rotate(-0deg);
+    }
+    75% {
+        transform: rotate(15deg);
+    }
+    100% {
+        transform: rotate(-45deg);
+    }
+}
