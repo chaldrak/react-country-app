@@ -11,7 +11,7 @@ const triTable = (tab) => {
         }
         if(check) break;
     }
-    return tab.slice(tab.length - 10, tab.length + 1);
+    return tab.length > 10 ? tab.slice(tab.length - 10, tab.length + 1) : tab;
 };
 
 export default triTable;
