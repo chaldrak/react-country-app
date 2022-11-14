@@ -4,6 +4,7 @@ import useFetch from "../../server/useFetch";
 import getFirstLetters from "../../composables/getFirstLetters";
 import triTable from "../../composables/triBulles";
 import Footer from "../footer/Footer";
+import { useOutletContext } from "react-router-dom";
 
 const url = "https://restcountries.com/v2/all";
 
@@ -19,7 +20,8 @@ const CountriesRender = (props) => {
 };
 
 const RenderCountryByFirstLetter = (props) => {
-    const countries = props.data;
+    const query = props.query
+    const countries = query ? props.data.filter((c) => c.name.toLowerCase().includes(query)) : props.data;
     const letters = getFirstLetters(countries);
     return (
         triTable(letters).map((letter, index) => {
@@ -52,13 +54,13 @@ const Loading = () => {
 
 const Container = () => {
     const {data, isLoading} = useFetch(url);
-    console.log(useFetch(url));
+    const query = useOutletContext();
     return (
         <div className='pl-0 mx-10 lg:mx-0 lg:pl-[20rem] text-lightgray'>
             <div className="py-5 max-x-3xl mx-auto">
                 <Alert data={data} />
                 {
-                    isLoading ? <Loading /> : <RenderCountryByFirstLetter data={data} />
+                    isLoading ? <Loading /> : <RenderCountryByFirstLetter query={query} data={data} />
                 }
             </div>
             <Footer />

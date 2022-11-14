@@ -2,7 +2,7 @@ import "./Sidebar.css";
 import { BsSearch, BsFlagFill, BsClipboardData } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({handleInput}) => {
     return (
         <div className="text-lightgray bg-dark-light px-10 pt-10 pb-2 lg:p-10 lg:block sticky top-[30px] lg:fixed z-20 lg:inset-0 lg:top-[60px] lg:left-0 lg:border-r border-gray lg:w-[20rem] lg:shadow-none shadow-lg">
             <div className="bg-gray relative pointer-events-auto">
@@ -13,6 +13,7 @@ const Sidebar = () => {
                         placeholder="Quick search..."
                         name=""
                         className="outline-none bg-transparent text-white"
+                        onChange={(e) => handleInput(e.target.value)}
                     />
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./App.css"
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -18,12 +18,17 @@ function App(){
       progress: undefined,
       theme: "colored",
     });;
+  const [query, setQuery] = useState('');
+
+  const handleInput = (q) => {
+    setQuery(q);
+  }
 
   return (
     <div>
       <div className='max-w-8xl mx-auto lg:px-10'>
-        <Sidebar />
-        <Outlet />
+        <Sidebar handleInput={handleInput} />
+        <Outlet context={query} />
       </div>
     </div>
   );

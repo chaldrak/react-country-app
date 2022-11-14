@@ -1,3 +1,5 @@
+import formatNumber from "../../composables/formatNumber";
+
 const Card = (props) => {
     const country = props.item
     const name = country.name;
@@ -24,7 +26,7 @@ const Card = (props) => {
                             Languages : <span className="text-lightgray">{ languages.join(', ') }</span>
                         </p>
                         <p>
-                            Population : <span className="text-lightgray">{ population }</span>
+                            Population : <span className="text-lightgray">{ formatNumber(population) }</span>
                         </p>
                         <p>
                             Currency : <span className="text-lightgray">{ currencies.join(', ') }</span>
