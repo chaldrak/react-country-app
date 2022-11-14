@@ -1,5 +1,6 @@
 import "./Sidebar.css";
 import { BsSearch, BsFlagFill, BsClipboardData } from "react-icons/bs";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
     return (
@@ -18,20 +19,20 @@ const Sidebar = () => {
             <div className="my-10 bg-transparent">
                 <ul className="space-y-4">
                     <li>
-                        <a href="" className="flex items-center group">
+                        <NavLink to="/countries" className="flex items-center group">
                             <div className="h-[25px] w-[25px] group-hover:bg-skyblue group-hover:text-white bg-gray mr-4 rounded-md">
                                 <BsFlagFill className="w-full h-full p-1 mr-4 block m-auto" />
                             </div>
                             <p className="group-hover:text-white">Countries</p>
-                        </a>
+                        </NavLink>
                     </li>
                     <li>
-                        <a href="" className="flex items-center group">
+                        <NavLink to="/stats" className="flex items-center group">
                             <div className="h-[25px] w-[25px] group-hover:bg-skyblue group-hover:text-white bg-gray mr-4 rounded-md">
                                 <BsClipboardData className="w-full h-full p-1 mr-4 block m-auto" />
                             </div>
                             <p className="group-hover:text-white">Stats</p>
-                        </a>
+                        </NavLink>
                     </li>
                 </ul>
             </div>

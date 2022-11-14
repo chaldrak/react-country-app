@@ -5,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Sidebar from '../components/sidebar/Sidebar';
 import Container from '../components/container/Container';
+import { Outlet } from "react-router-dom";
 
 function App(){
   const notify = () => toast.success('🦄 Wow so easy!', {
@@ -22,7 +23,7 @@ function App(){
     <div>
       <div className='max-w-8xl mx-auto px-10'>
         <Sidebar />
-        <Container />
+        <Outlet />
       </div>
     </div>
   );
