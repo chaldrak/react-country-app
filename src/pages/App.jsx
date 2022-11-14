@@ -3,6 +3,8 @@ import "./App.css"
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Sidebar from '../components/sidebar/Sidebar';
+import Container from '../components/container/Container';
 
 function App(){
   const notify = () => toast.success('🦄 Wow so easy!', {
@@ -18,19 +20,10 @@ function App(){
 
   return (
     <div>
-      <button onClick={notify}>Notify!</button>
-      <ToastContainer
-        position="top-right"
-        autoClose={2000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="colored"
-      />
+      <div className='max-w-8xl mx-auto px-10'>
+        <Sidebar />
+        <Container />
+      </div>
     </div>
   );
 }
