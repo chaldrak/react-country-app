@@ -1,8 +1,8 @@
 const Alert = (props) => {
     const countries = props.data;
     return (
-        <div className="h-16 z-40 max-w-max px-5 md:sticky md:top-[105px] flex mx-auto items-center border rounded-lg shadow-lg shadow-gray bg-dark-light" >
-            <p className="text-center mx-auto text-xl md:text-2xl block">
+        <div className="h-16 z-40 max-w-max px-5 lg:sticky lg:top-[105px] flex mx-auto items-center border rounded-lg shadow-lg shadow-gray bg-dark-light" >
+            <p className="text-center mx-auto text-xl lg:text-2xl block">
                 Currently, we have <b className="text-skyblue">{countries.length}</b> countries
             </p>
         </div>
