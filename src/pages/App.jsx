@@ -21,7 +21,7 @@ function App(){
 
   return (
     <div>
-      <div className='max-w-8xl mx-auto px-10'>
+      <div className='max-w-8xl mx-auto md:px-10'>
         <Sidebar />
         <Outlet />
       </div>

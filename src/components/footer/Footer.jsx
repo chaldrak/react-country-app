@@ -7,7 +7,7 @@ const Footer = () => {
                 <p>
                     Designed with 💞 by Chaldrak | Copyright © Nov 2022 | All rights reserved
                 </p>
-                <ul className="flex md:w-[100px] items-center justify-between">
+                <ul className="flex mt-4 md:mt-0 justify-center space-x-4 md:w-[100px] md:items-center md:justify-between">
                     <li>
                         <a href="https://twitter.com/chaldrakus" className="hover:text-white">
                             <BsTwitter />

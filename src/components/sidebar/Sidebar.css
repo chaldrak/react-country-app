@@ -1,0 +1,7 @@
+.active {
+    @apply text-skyblue;
+}
+
+.active .icon {
+    @apply bg-skyblue text-white
+}

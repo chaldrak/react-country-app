@@ -33,7 +33,7 @@ const RenderCountryByFirstLetter = (props) => {
                     <div className="absolute h-[30px] w-[30px] flex items-center bg-gray rounded-sm top-[50px]">
                         <h1 className="text-skyblue mx-auto block">{ letter }</h1>
                     </div>
-                    <div className="grid grid-cols-1 my-10 md:grid-cols-4 gap-4">
+                    <div className="grid my-10 grid-cols-4 gap-4">
                         <CountriesRender countries={count} />
                     </div>
                 </div>
@@ -50,11 +50,11 @@ const Loading = () => {
     )
 }
 
-const Container = () => {
+const Stats = () => {
     const {data, isLoading} = useFetch(url);
     console.log(useFetch(url));
     return (
-        <div className='pl-0 mx-10 md:pl-[20rem] text-lightgray'>
+        <div className='pl-[20rem] text-lightgray'>
             <div className="py-5 max-x-3xl mx-auto">
                 <Alert data={data} />
                 {
@@ -66,4 +66,4 @@ const Container = () => {
     )
 };
 
-export default Container;
+export default Stats;

@@ -7,7 +7,7 @@ const Header = () => {
 
     return (
         <nav className="bg-dark-light border-b block items-center border-gray sticky top-0 z-40">
-            <div className="px-2 md:px-10 py-3 mx-auto flex justify-between items-center">
+            <div className="px-5 md:px-10 py-3 mx-auto flex justify-between items-center">
                 <h2 className="text-xl md:text-3xl text-skyblue">World Countries Data</h2>
                 <ul className="flex justify-between items-center w-24 text-xl text-lightgray">
                     {
