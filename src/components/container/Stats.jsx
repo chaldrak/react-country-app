@@ -20,16 +20,18 @@ const RenderStats = (props) => {
     const world = {name: "World", population: getSum(countries)};
 
     useEffect(() => {
-        toast.info(`${searches.length}  satisfied the search criteria`, {
-            position: "bottom-left",
-            autoClose: 3000,
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-        });
+        if(query) {
+            toast.info(`${countries.length}  satisfied the search criteria`, {
+                position: "bottom-left",
+                autoClose: 3000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
+        }
     }, [tenHighest]);
     return (
         <div className="h-full mx-auto flex items-center w-full text-white">

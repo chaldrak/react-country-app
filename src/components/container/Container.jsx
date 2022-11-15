@@ -27,16 +27,18 @@ const RenderCountryByFirstLetter = (props) => {
     const letters = getFirstLetters(countries);
 
     useEffect(() => {
-        toast.info(`${countries.length}  satisfied the search criteria`, {
-            position: "bottom-left",
-            autoClose: 3000,
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-        });
+        if(query) {
+            toast.info(`${countries.length}  satisfied the search criteria`, {
+                position: "bottom-left",
+                autoClose: 3000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
+        }
     }, [query]);
     return (
         triTable(letters).map((letter, index) => {
