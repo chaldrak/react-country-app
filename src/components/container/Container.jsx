@@ -86,7 +86,7 @@ const Container = () => {
     const query = useOutletContext();
 
     return (
-        <div className='pl-0 mx-10 lg:mx-0 lg:pl-[20rem] text-lightgray'>
+        <div className='pl-0 mx-10 lg:mx-0 lg:pl-[20rem] text-lightgray' >
             <div className="py-5 max-x-3xl mx-auto">
                 <Alert data={data} />
                 {

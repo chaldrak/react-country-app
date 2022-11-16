@@ -21,7 +21,7 @@ const RenderStats = (props) => {
 
     useEffect(() => {
         if(query) {
-            toast.info(`${countries.length}  satisfied the search criteria`, {
+            toast.info(`${searches.length}  satisfied the search criteria`, {
                 position: "bottom-left",
                 autoClose: 3000,
                 hideProgressBar: true,

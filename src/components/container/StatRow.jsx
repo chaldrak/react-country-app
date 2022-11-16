@@ -4,8 +4,8 @@ const StatRow = (props) => {
     const country = props.item;
     const worldPopulation = props.world;
     return (
-        <div className="grid grid-cols-5 gap-2 items-center">
-            <div className="col-span-1">
+        <div className="grid grid-cols-6 gap-2 items-center">
+            <div className="col-span-2">
                 <p className="text-right">
                     {country?.name === 'United States of America' ? 'USA' : country?.name}
                 </p>
